@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Wissensraum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+<header class="site-header">
+    <a class="brand" href="index.html" aria-label="Startseite Wissensraum">
+        <div class="logo" aria-hidden="true">W</div>
+        <span>Wissensraum</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="shop.html">Shop</a>
+        <a href="about.html">Über uns</a>
+        <a href="lizenz.html">Lizenz</a>
+    </nav>
+</header>
+
+<figure class="hero-media">
+    <img src="assets/table.jpg" alt="Arbeitsplatz mit Laptop, Kopfhörern, Kamera und Pflanze">
+    <figcaption>© ClickerHappy / Pixabay – Pixabay Content License</figcaption>
+</figure>
+
+<main id="main-content" tabindex="-1">
+
+    <section class="hero impressum-hero">
+        <p class="label">Kontakt</p>
+        <h1>Kontakt aufnehmen</h1>
+        <p>
+            Haben Sie Fragen zu Wissensraum, unseren Produkten oder zur Nutzung der Plattform?
+            Nutzen Sie das Kontaktformular oder wenden Sie sich direkt an unser Team.
+        </p>
+    </section>
+
+    <section class="cart-box cart-panel" aria-labelledby="kontakt-title">
+        <h2 id="kontakt-title">Kontaktformular</h2>
+
+        <form class="checkout-form" novalidate>
+            <h4>Persönliche Angaben</h4>
+
+            <div class="form-grid">
+                <div class="form-field">
+                    <label for="contact-firstname">Vorname *</label>
+                    <input id="contact-firstname" name="firstname" type="text" required autocomplete="given-name">
+                    <p class="error-message"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-lastname">Nachname *</label>
+                    <input id="contact-lastname" name="lastname" type="text" required autocomplete="family-name">
+                    <p class="error-message"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-email">E-Mail-Adresse *</label>
+                    <input id="contact-email" name="email" type="email" required autocomplete="email">
+                    <p class="error-message"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-phone">Telefonnummer</label>
+                    <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
+                    <p class="error-message"></p>
+                </div>
+            </div>
+
+            <h4>Nachricht</h4>
+
+            <div class="form-details">
+                <label for="contact-message">Ihre Nachricht *</label>
+                <textarea id="contact-message" name="message" required></textarea>
+                <p class="error-message"></p>
+            </div>
+
+            <label class="checkbox-row">
+                <input type="checkbox" name="privacy" required>
+                <span>
+                    Ich habe die
+                    <a href="datenschutz.html">Datenschutzhinweise</a>
+                    gelesen.
+                </span>
+            </label>
+
+            <button type="submit" class="checkout-submit">
+                Nachricht senden
+            </button>
+        </form>
+
+        <p class="notice">
+            Ihre Anfrage wird vertraulich behandelt und ausschließlich zur Bearbeitung Ihres Anliegens verwendet.
+        </p>
+    </section>
+
+    <section class="cart-box info-block">
+        <h2>Direkter Kontakt</h2>
+        <p>
+            Wissensraum GmbH<br>
+            Musterstraße 1<br>
+            1010 Wien<br>
+            Österreich
+        </p>
+
+        <p>
+            E-Mail:
+            <a href="mailto:kontakt@wissensraum.example">kontakt@wissensraum.example</a>
+        </p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <section class="legal-accordion" aria-label="Rechtliche Informationen">
+        <details>
+            <summary>Barrierefreiheit</summary>
+            <div class="accordion-content">
+                <p>
+                    Wissensraum legt Wert auf eine zugängliche Nutzung der Website.
+                    Die Oberfläche wurde mit Fokus auf klare Struktur, Tastaturbedienbarkeit,
+                    sichtbare Fokusmarkierungen und gute Lesbarkeit umgesetzt.
+                    Diese Website wurde mit Blick auf WCAG 2.2 AA entwickelt.
+                    Eine vollständige technische Prüfung ist erforderlich, um die Konformität abschließend zu bestätigen.
+                </p>
+                <ul>
+                    <li>Semantisches HTML</li>
+                    <li>Tastaturbedienbarkeit</li>
+                    <li>Ausreichende Farbkontraste</li>
+                    <li>Responsive Darstellung</li>
+                    <li>Klare Navigationsstruktur</li>
+                    <li>Sichtbare Fokus-Markierungen</li>
+                </ul>
+            </div>
+        </details>
+    </section>
+
+    <nav class="footer-links" aria-label="Rechtliche Links">
+        <a href="kontakt.html" aria-current="page">Kontakt</a>
+        <span aria-hidden="true">/</span>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <span aria-hidden="true">/</span>
+        <a href="impressum.html">Impressum</a>
+    </nav>
+</footer>
+
+</body>
+</html>
