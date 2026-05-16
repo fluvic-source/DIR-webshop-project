@@ -38,19 +38,27 @@
         </p>
     </section>
 
+
     <section class="feature-showcase" aria-labelledby="feature-heading">
 
-        <div class="feature-intro">
+        <div class="feature-intro feature-intro-with-video">
+            <div>
+                <h2 id="feature-heading">
+                    Damit Projekte, Wissen und Aufgaben an einem Ort bleiben.
+                </h2>
 
-            <h2 id="feature-heading">
-                Damit Projekte, Wissen und Aufgaben an einem Ort bleiben.
-            </h2>
+                <p class="feature-text">
+                    Wissensraum kombiniert Dokumentation, Aufgabenverwaltung,
+                    Wikis, Kalender und Teamorganisation in einer zentralen Plattform.
+                    Teams behalten Informationen, Prozesse und Projekte übersichtlich organisiert.
+                </p>
+            </div>
 
-            <p class="feature-text">
-                Wissensraum kombiniert Dokumentation, Aufgabenverwaltung,
-                Wikis, Kalender und Teamorganisation in einer zentralen Plattform.
-                Teams behalten Informationen, Prozesse und Projekte übersichtlich organisiert.
-            </p>
+            <div class="intro-video">
+                <video autoplay muted loop playsinline aria-label="Team arbeitet gemeinsam im Büro">
+                    <source src="assets/office.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
 
         <div class="feature-highlight-grid">
@@ -191,7 +199,6 @@
         </article>
     </section>
     </section>
-
     <section class="cart-box cart-panel" aria-label="Warenkorb">
         <h2 class="cart-title">
             <img src="assets/cart-shopping-solid-full.svg" alt="" class="cart-icon">
@@ -210,7 +217,7 @@
             <h4>Kontakt</h4>
             <div class="form-grid">
                 <div class="form-field">
-                    <label for="checkout-email">E-Mail-Adresse *</label>
+                    <label for="checkout-email">E-Mail-Adresse für den Zugang *</label>
                     <input id="checkout-email" name="email" type="email" required autocomplete="email">
                     <p class="error-message"></p>
                 </div>
@@ -222,9 +229,7 @@
                 </div>
             </div>
 
-            <h4>Adresse</h4>
-            <p class="form-hint">Lieferung ist nur an eine Adresse innerhalb Österreichs möglich.</p>
-
+            <h4>Rechnungsdaten</h4>
             <div class="form-grid">
                 <div class="form-field">
                     <label for="firstname">Vorname *</label>
@@ -239,14 +244,14 @@
                 </div>
 
                 <div class="form-field">
-                    <label for="street">Straße *</label>
-                    <input id="street" name="street" type="text" required autocomplete="address-line1">
+                    <label for="company">Unternehmen optional</label>
+                    <input id="company" name="company" type="text" autocomplete="organization">
                     <p class="error-message"></p>
                 </div>
 
                 <div class="form-field">
-                    <label for="house">Hausnummer / Stiege / Tür *</label>
-                    <input id="house" name="house" type="text" required autocomplete="address-line2">
+                    <label for="country">Land *</label>
+                    <input id="country" name="country" type="text" required autocomplete="country-name">
                     <p class="error-message"></p>
                 </div>
 
@@ -264,29 +269,50 @@
             </div>
 
             <details class="form-details">
-                <summary>Zusätzliche Informationen optional</summary>
+                <summary>Vollständige Rechnungsadresse optional ergänzen</summary>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="street">Straße</label>
+                        <input id="street" name="street" type="text" autocomplete="address-line1">
+                        <p class="error-message"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="house">Hausnummer / Stiege / Tür</label>
+                        <input id="house" name="house" type="text" autocomplete="address-line2">
+                        <p class="error-message"></p>
+                    </div>
+                </div>
+
                 <label for="order-notes">Anmerkungen zur Bestellung</label>
                 <textarea id="order-notes" name="notes"></textarea>
             </details>
 
             <label class="checkbox-row">
                 <input type="checkbox" name="company-payment">
-                Ich möchte als Firma bezahlen
+                Ich bestelle als Unternehmen.
             </label>
 
-            <label class="checkbox-row">
-                <input type="checkbox" name="different-billing-address">
-                Ich habe eine abweichende Rechnungsadresse
-            </label>
+            <div class="form-field">
+                <label class="checkbox-row">
+                    <input id="license-terms" type="checkbox" name="license-terms" required>
+                    <span>
+                    Ich akzeptiere die
+                    <a href="lizenz.html">Lizenzbedingungen</a>.
+                </span>
+                </label>
+                <p class="error-message"></p>
+            </div>
 
             <button type="submit" class="checkout-submit">
-                Weiter zu den Zahlungsarten
+                Weiter zur Zahlung
             </button>
         </form>
 
         <p class="notice">
-            Ihre Bestellung wird sicher verarbeitet. Zahlungsdaten werden erst im nächsten Schritt abgefragt.
-        </p>
+            Der digitale Zugang wird nach Abschluss der Bestellung per E-Mail bereitgestellt.
+            Es erfolgt kein physischer Versand.
         </p>
     </section>
 </main>
@@ -322,6 +348,11 @@
         <span aria-hidden="true">/</span>
         <a href="impressum.html">Impressum</a>
     </nav>
+
+    <p class="notice">
+        Diese Website wurde im Rahmen eines universitären Projekts erstellt.
+        Die dargestellten Leistungen dienen Demonstrationszwecken.
+    </p>
 </footer>
 
 <div id="mock-popup" class="mock-popup hidden" role="dialog" aria-modal="true" aria-labelledby="mock-popup-title">

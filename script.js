@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("checkout-form");
     const closePopupButton = document.getElementById("close-popup-button");
     const popup = document.getElementById("mock-popup");
+    const requiredFields = form.querySelectorAll("input[required], textarea[required], select[required]");
 
     productButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -64,13 +65,13 @@ function checkout() {
         firstInput.focus();
     }
 }
-
 function validateForm(form) {
     let isValid = true;
-    const requiredFields = form.querySelectorAll("input[required]");
+    const requiredFields = form.querySelectorAll("input[required], textarea[required], select[required]");
 
     requiredFields.forEach((field) => {
-        const error = field.parentElement.querySelector(".error-message");
+        const fieldWrapper = field.closest(".form-field");
+        const error = fieldWrapper.querySelector(".error-message");
 
         field.removeAttribute("aria-invalid");
         field.removeAttribute("aria-describedby");
@@ -86,7 +87,9 @@ function validateForm(form) {
             field.setAttribute("aria-invalid", "true");
             field.setAttribute("aria-describedby", error.id);
 
-            if (field.validity.valueMissing) {
+            if (field.type === "checkbox" && field.validity.valueMissing) {
+                error.textContent = "Bitte akzeptieren Sie die Lizenzbedingungen.";
+            } else if (field.validity.valueMissing) {
                 error.textContent = "Dieses Feld ist erforderlich.";
             } else if (field.validity.typeMismatch) {
                 error.textContent = "Bitte geben Sie einen gültigen Wert ein.";
