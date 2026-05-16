@@ -977,3 +977,80 @@ textarea[aria-invalid="true"] {
     max-width: 1100px;
     margin: 16px auto 0;
 }
+
+
+/* ==================================================
+   16. Cookie Banner
+================================================== */
+
+/* Cookie-Banner */
+
+.cookie-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1100px, calc(100% - 32px));
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    z-index: 5000;
+}
+
+.cookie-banner.hidden {
+    display: none;
+}
+
+.cookie-banner-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 28px;
+    align-items: center;
+}
+
+.cookie-banner-text h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--blue);
+    font-size: 1.2rem;
+}
+
+.cookie-banner-text p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.6;
+    max-width: 720px;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.cookie-secondary {
+    background: white;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.cookie-secondary:hover {
+    background: var(--light-blue);
+}
+
+@media (max-width: 760px) {
+    .cookie-banner-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cookie-banner-actions {
+        width: 100%;
+    }
+
+    .cookie-banner-actions button {
+        width: 100%;
+    }
+}

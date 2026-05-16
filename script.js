@@ -138,3 +138,59 @@ function closeMockPopup() {
         lastFocusedElement.focus();
     }
 }
+
+const cookieBanner = document.getElementById("cookie-banner");
+const cookieAccept = document.getElementById("cookie-accept");
+const cookieEssential = document.getElementById("cookie-essential");
+
+if (cookieBanner && !localStorage.getItem("wissensraum-cookie-choice")) {
+    cookieBanner.classList.remove("hidden");
+}
+
+function saveCookieChoice(choice) {
+    localStorage.setItem("wissensraum-cookie-choice", choice);
+    cookieBanner.classList.add("hidden");
+}
+
+if (cookieAccept) {
+    cookieAccept.addEventListener("click", () => {
+        saveCookieChoice("all");
+    });
+}
+
+if (cookieEssential) {
+    cookieEssential.addEventListener("click", () => {
+        saveCookieChoice("essential");
+    });
+}
+
+/* Kontaktformular Mockup */
+
+const contactForm = document.getElementById("contact-form");
+const contactPopup = document.getElementById("contact-popup");
+const closeContactPopupButton = document.getElementById("close-contact-popup-button");
+const loadingOverlay = document.getElementById("loading-overlay");
+
+if (contactForm && contactPopup && closeContactPopupButton && loadingOverlay) {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+        }
+
+        loadingOverlay.classList.remove("hidden");
+
+        setTimeout(() => {
+            loadingOverlay.classList.add("hidden");
+            contactPopup.classList.remove("hidden");
+            closeContactPopupButton.focus();
+            contactForm.reset();
+        }, 1200);
+    });
+
+    closeContactPopupButton.addEventListener("click", function () {
+        contactPopup.classList.add("hidden");
+    });
+}

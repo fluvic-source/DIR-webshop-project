@@ -160,6 +160,9 @@
             <h2>Wissensraum Basic</h2>
             <p>Für Einzelpersonen und kleine Projekte.</p>
             <p class="price">€ 9,99 / Monat</p>
+            <p class="notice">
+                Monatlich kündbar. Abrechnung erfolgt monatlich.
+            </p>
             <ul>
                 <li>1 Benutzerkonto</li>
                 <li>Notizen und Aufgaben</li>
@@ -174,6 +177,9 @@
             <h2>Wissensraum Pro</h2>
             <p>Für kleine Teams und Start-ups.</p>
             <p class="price">€ 19,99 / Monat</p>
+            <p class="notice">
+                Monatlich kündbar. Abrechnung erfolgt monatlich.
+            </p>
             <ul>
                 <li>5 Benutzerkonten</li>
                 <li>Teamspaces</li>
@@ -188,6 +194,9 @@
             <h2>Wissensraum Business</h2>
             <p>Für wachsende Unternehmen.</p>
             <p class="price">€ 49,99 / Monat</p>
+            <p class="notice">
+                Monatlich kündbar. Abrechnung erfolgt monatlich.
+            </p>
             <ul>
                 <li>20 Benutzerkonten</li>
                 <li>Projekt- und Rechteverwaltung</li>
@@ -257,7 +266,7 @@
 
                 <div class="form-field">
                     <label for="zip">PLZ *</label>
-                    <input id="zip" name="zip" type="text" required inputmode="numeric" pattern="[0-9]{4}" autocomplete="postal-code">
+                    <input id="zip" name="zip" type="text" required autocomplete="postal-code">
                     <p class="error-message"></p>
                 </div>
 
@@ -373,6 +382,30 @@
     <span class="sr-only">Ladevorgang läuft</span>
 </div>
 
+<div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <h2 id="cookie-title">Cookie-Einstellungen</h2>
+            <p id="cookie-text">
+                Wissensraum verwendet technisch notwendige Cookies,
+                um grundlegende Funktionen der Website bereitzustellen.
+                Analyse- und Trackingfunktionen werden in diesem
+                Demonstrationsprojekt ausschließlich simuliert dargestellt.
+            </p>
+        </div>
+
+        <div class="cookie-banner-actions">
+            <button id="cookie-essential" type="button" class="cookie-secondary">
+                Nur notwendige Cookies
+            </button>
+            <button id="cookie-accept" type="button">
+                Alle akzeptieren
+            </button>
+        </div>
+    </div>
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>

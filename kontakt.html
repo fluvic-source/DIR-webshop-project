@@ -42,7 +42,7 @@
     <section class="cart-box cart-panel" aria-labelledby="kontakt-title">
         <h2 id="kontakt-title">Kontaktformular</h2>
 
-        <form class="checkout-form" novalidate>
+        <form id="contact-form" class="checkout-form" novalidate>
             <h4>Persönliche Angaben</h4>
 
             <div class="form-grid">
@@ -152,6 +152,47 @@
         Die dargestellten Leistungen dienen Demonstrationszwecken.
     </p>
 </footer>
+
+<div id="contact-popup" class="mock-popup hidden" role="dialog" aria-modal="true" aria-labelledby="contact-popup-title">
+    <div class="mock-popup-content">
+        <h2 id="contact-popup-title">Nachricht gesendet</h2>
+        <p>
+            Ihre Kontaktanfrage wurde im Rahmen dieses Mockups erfolgreich verarbeitet.
+            Es wurde keine echte Nachricht versendet.
+        </p>
+        <button id="close-contact-popup-button" type="button">Schließen</button>
+    </div>
+</div>
+
+<div id="loading-overlay" class="loading-overlay hidden" role="status" aria-live="polite">
+    <img src="assets/elder.gif" alt="">
+    <span class="sr-only">Ladevorgang läuft</span>
+</div>
+
+<div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <h2 id="cookie-title">Cookie-Einstellungen</h2>
+            <p id="cookie-text">
+                Wissensraum verwendet technisch notwendige Cookies,
+                um grundlegende Funktionen der Website bereitzustellen.
+                Analyse- und Trackingfunktionen werden in diesem
+                Demonstrationsprojekt ausschließlich simuliert dargestellt.
+            </p>
+        </div>
+
+        <div class="cookie-banner-actions">
+            <button id="cookie-essential" type="button" class="cookie-secondary">
+                Nur notwendige Cookies
+            </button>
+            <button id="cookie-accept" type="button">
+                Alle akzeptieren
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
