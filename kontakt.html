@@ -73,20 +73,23 @@
 
             <h4>Nachricht</h4>
 
-            <div class="form-details">
+            <div class="form-details form-field">
                 <label for="contact-message">Ihre Nachricht *</label>
                 <textarea id="contact-message" name="message" required></textarea>
                 <p class="error-message"></p>
             </div>
 
-            <label class="checkbox-row">
-                <input type="checkbox" name="privacy" required>
-                <span>
-                    Ich habe die
-                    <a href="datenschutz.html">Datenschutzhinweise</a>
-                    gelesen.
-                </span>
-            </label>
+            <div class="form-field">
+                <label class="checkbox-row">
+                    <input type="checkbox" name="privacy" required>
+                    <span>
+            Ich habe die
+            <a href="datenschutz.html">Datenschutzhinweise</a>
+            gelesen.
+        </span>
+                </label>
+                <p class="error-message"></p>
+            </div>
 
             <button type="submit" class="checkout-submit">
                 Nachricht senden

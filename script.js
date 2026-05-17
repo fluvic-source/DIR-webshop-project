@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("checkout-form");
     const closePopupButton = document.getElementById("close-popup-button");
     const popup = document.getElementById("mock-popup");
-    const requiredFields = form.querySelectorAll("input[required], textarea[required], select[required]");
 
     productButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -88,7 +87,9 @@ function validateForm(form) {
             field.setAttribute("aria-describedby", error.id);
 
             if (field.type === "checkbox" && field.validity.valueMissing) {
-                error.textContent = "Bitte akzeptieren Sie die Lizenzbedingungen.";
+                error.textContent = field.name === "privacy"
+                    ? "Bitte akzeptieren Sie die Datenschutzhinweise."
+                    : "Bitte akzeptieren Sie die Lizenzbedingungen.";
             } else if (field.validity.valueMissing) {
                 error.textContent = "Dieses Feld ist erforderlich.";
             } else if (field.validity.typeMismatch) {
@@ -175,8 +176,7 @@ if (contactForm && contactPopup && closeContactPopupButton && loadingOverlay) {
     contactForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        if (!contactForm.checkValidity()) {
-            contactForm.reportValidity();
+        if (!validateForm(contactForm)) {
             return;
         }
 
